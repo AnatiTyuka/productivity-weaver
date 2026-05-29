@@ -4,8 +4,6 @@ import {
   Mail,
   FileText,
   CalendarCheck2,
-  Sparkles,
-  MessageSquare,
 } from "lucide-react";
 import {
   Sidebar,
@@ -25,8 +23,6 @@ const items = [
   { title: "Email Generator", url: "/email", icon: Mail },
   { title: "Meeting Summarizer", url: "/summarizer", icon: FileText },
   { title: "Task Planner", url: "/planner", icon: CalendarCheck2 },
-  { title: "Research", url: "/research", icon: Sparkles },
-  { title: "AI Chat", url: "/chat", icon: MessageSquare },
 ];
 
 export function AppSidebar() {

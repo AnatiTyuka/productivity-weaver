@@ -3,8 +3,6 @@ import {
   Mail,
   FileText,
   CalendarCheck2,
-  Sparkles,
-  MessageSquare,
   ArrowRight,
 } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -23,8 +21,6 @@ const modules = [
   { to: "/email", icon: Mail, title: "Smart Email Generator", desc: "Draft polished workplace emails in any tone." },
   { to: "/summarizer", icon: FileText, title: "Meeting Notes Summarizer", desc: "Turn raw notes into action items, decisions, deadlines." },
   { to: "/planner", icon: CalendarCheck2, title: "AI Task Planner", desc: "Prioritize and schedule your day or week automatically." },
-  { to: "/research", icon: Sparkles, title: "AI Research Assistant", desc: "Get briefings, insights, and recommendations on any topic." },
-  { to: "/chat", icon: MessageSquare, title: "AI Chatbot", desc: "Ask your workplace assistant anything, anytime." },
 ] as const;
 
 function Dashboard() {
@@ -36,7 +32,7 @@ function Dashboard() {
           Work smarter with your AI productivity suite.
         </h1>
         <p className="mt-3 max-w-xl opacity-90">
-          Five purpose-built modules to draft, summarize, plan, research, and chat — all in one
+          Three purpose-built modules to draft, summarize, and plan — all in one
           modern workspace.
         </p>
       </section>
