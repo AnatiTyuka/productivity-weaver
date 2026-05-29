@@ -88,27 +88,3 @@ export const planTasks = createServerFn({ method: "POST" })
     }
   });
 
-// Research
-const ResearchInput = z.object({ topic: z.string().min(2).max(2000) });
-
-export const researchTopic = createServerFn({ method: "POST" })
-  .inputValidator((d: unknown) => ResearchInput.parse(d))
-  .handler(async ({ data }) => {
-    try {
-      const { output } = await generateText({
-        model: getModel(),
-        output: Output.object({
-          schema: z.object({
-            overview: z.string(),
-            key_insights: z.array(z.string()),
-            recommendations: z.array(z.string()),
-            further_reading: z.array(z.string()),
-          }),
-        }),
-        prompt: `Provide a clear research briefing on: ${data.topic}`,
-      });
-      return output;
-    } catch (e) {
-      handleError(e);
-    }
-  });
